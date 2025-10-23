@@ -1,4 +1,4 @@
-import { Box, ButtonGroup, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, ButtonGroup, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
 import { useState } from "react";
 import DataForm from "./dataForm";
 import CardList from "./cardList";
@@ -17,6 +17,7 @@ export default function Page() {
     
     return (
         <>
+        <Typography variant="h1" gutterBottom >MUI Day 1</Typography>
             <ToggleButtonGroup
             sx={{marginX: 'auto'}}
                 color="primary"

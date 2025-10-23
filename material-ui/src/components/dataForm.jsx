@@ -22,10 +22,20 @@ export default function DataForm({ getData }) {
     console.log(role)
     console.log(skills)
 
+    function clearData(e) {
+        setName('')
+        setAge('')
+        setRole('')
+        setkills({
+        React: false,
+        Angular: false,
+        NodeJs: false,
+    })
+    }
     return (
         <Container sx={{ marginTop: 8 }}>
             <Typography variant="h3" gutterBottom >Enter Data</Typography>
-            <form onSubmit={(e) => { e.preventDefault(); getData(data) }}>
+            <form onSubmit={(e) => { e.preventDefault(); getData(data); clearData() }}>
                 <Stack spacing={2} maxWidth={'350px'} marginX={'auto'}>
 
                     <TextField value={name} onChange={(e) => { setName(e.target.value) }} id="inputName" label="Name" variant="outlined" />
